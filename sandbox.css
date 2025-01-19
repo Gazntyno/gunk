@@ -1,9 +1,23 @@
 body {
-    margin: 0;
-    overflow: hidden;
-    background-color: #1a112b;
+  margin: 0;
+  overflow: hidden;
+  background-color: #1a112b;
 }
 
 canvas {
-    display: block;
+  display: block;
+}
+
+#crosshair {
+  position: fixed;
+  top: 50%; /* Position it vertically center */
+  left: 50%; /* Position it horizontally center */
+  width: 10px; /* Dot size */
+  height: 10px; /* Dot size */
+  margin-left: -5px; /* half of width to center exactly */
+  margin-top: -5px; /* half of height to center exactly */
+  background: rgb(0, 251, 255); /* Color of the dot */
+  border-radius: 50%; /* Make it circular */
+  pointer-events: none; /* Allow clicks to pass through */
+  z-index: 9999; /* Make sure it’s always on top */
 }
